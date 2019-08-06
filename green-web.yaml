@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: green-web
-        image: wipasp/green-web:latest
+        image: wipasp/green-web:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80
