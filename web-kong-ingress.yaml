@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web-kong-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: blue.kong-test.ada.gabledemo.com
+    http:
+      paths:
+      - backend:
+          serviceName: blue-web
+          servicePort: 80
+  - host: green.kong-test.ada.gabledemo.com
+    http:
+      paths:
+      - backend:
+          serviceName: green-web
+          servicePort: 80
